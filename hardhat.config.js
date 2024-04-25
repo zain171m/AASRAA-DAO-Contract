@@ -1,4 +1,5 @@
 require("@matterlabs/hardhat-zksync-solc");
+require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -11,7 +12,13 @@ module.exports = {
       },
     },
   },
+  defaultNetwork: "sepolia",
   networks: {
+    hardhat:{},
+    sepolia:{
+      url:"https://eth-sepolia.g.alchemy.com/v2/Oqk82uxJEfXloEtgrKYvGnRmXx3IxWOy",
+      accounts:[`0x${process.env.PRIVATE_KEY}`]
+    },
     zksync_testnet: {
       url: "https://zksync2-testnet.zksync.dev",
       ethNetwork: "goerli",
