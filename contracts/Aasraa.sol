@@ -42,8 +42,8 @@ contract Aasraa is ERC20 {
         string imageUrl;
         address[] donors;
         uint[] donations;
-        uint yesCount;
-        uint noCount;
+        uint256 noCount;
+        uint256 yesCount;
         bool approved;
     }
 
@@ -70,8 +70,7 @@ contract Aasraa is ERC20 {
     uint256 public numberOfCampaigns = 0;
 
 
-    mapping(address => mapping(uint => bool)) voters;
-    mapping(address => mapping(uint => bool)) voteoption;
+    mapping(address => mapping(uint => bool)) public voters;
 
 
 
@@ -179,12 +178,11 @@ contract Aasraa is ERC20 {
         require(campaignId < numberOfCampaigns, "the campaign does not exist corresponding to this id");
         require(campaigns[campaignId].approved == false, "the campaign already approved");
         require(!voters[msg.sender][campaignId], "Already voted for the campaign");
-
         Campaign storage campaign = campaigns[campaignId];
         
         uint256 voterBalance = balanceOf(msg.sender);  
-
-         if(!support)
+        
+        if(!support)
         {
             campaign.noCount += voterBalance;   
         }
@@ -205,3 +203,5 @@ contract Aasraa is ERC20 {
     }
 
 }
+
+

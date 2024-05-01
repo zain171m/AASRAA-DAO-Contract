@@ -12,11 +12,16 @@ module.exports = {
       },
     },
   },
-  defaultNetwork: "sepolia",
+  defaultNetwork: "canto_testnet",
   networks: {
     hardhat:{},
     sepolia:{
       url:"https://eth-sepolia.g.alchemy.com/v2/Oqk82uxJEfXloEtgrKYvGnRmXx3IxWOy",
+      accounts:[`0x${process.env.PRIVATE_KEY}`]
+    },
+    canto_testnet:{
+      url:"https://canto-testnet.plexnode.wtf",
+      chainId: 1171,
       accounts:[`0x${process.env.PRIVATE_KEY}`]
     },
     zksync_testnet: {
