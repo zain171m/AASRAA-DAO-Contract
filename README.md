@@ -1,3 +1,20 @@
+<p align="center">
+    <h1 align="center">
+      <picture>
+        <img width="40" alt="Plurality icon." src="https://github.com/zain171m/AASRAA-DAO/blob/main/src/assets/aasraa.svg">
+      </picture>
+      AASRAA
+    </h1>
+</p>
+
+| AASRAA is a Crowdfunding Decentralized Autonomous Organization which is governed by the donors. Donors are incentivised with AASRAA tokens upon donations.AASRAA tokens are primarily used in voting process for the campaigns approval. Using a robust platform which is governed by the donors where a scammer can not just fill up the platforms with campaigns rather campaigns needs to be approved through a voting process. |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+
+
+## Live App
+https://aasraa-dao.vercel.app/
+
+
 ## Getting Started
 
 Create a project using this example:
